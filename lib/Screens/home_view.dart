@@ -1,3 +1,4 @@
+import 'package:cake_shop_flutter/Utilities/cake_tabs.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 
@@ -6,23 +7,23 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // List<Widget> cakeTabs = [
-    //   CakeTabs(
-    //       iconPath: 'assets/icons/birthday-cakeicon.png',
-    //       colors: Colors.pink.shade50),
-    //   CakeTabs(
-    //       iconPath: 'assets/icons/cupcakeicon.png',
-    //       colors: Colors.teal.shade50),
-    //   CakeTabs(
-    //       iconPath: 'assets/icons/piece-of-cakeicon.png',
-    //       colors: Colors.brown.shade50),
-    //   CakeTabs(
-    //       iconPath: 'assets/icons/muffinicon.png',
-    //       colors: Colors.yellow.shade50),
-    //   CakeTabs(
-    //       iconPath: 'assets/icons/weddingcakeicon.png',
-    //       colors: Colors.red.shade50)
-    // ];
+    List<Widget> cakeTabs = [
+      CakeTabs(
+          iconPath: 'assets/icons/birthday-cakeicon.png',
+          colors: Colors.pink.shade50),
+      CakeTabs(
+          iconPath: 'assets/icons/cupcakeicon.png',
+          colors: Colors.teal.shade50),
+      CakeTabs(
+          iconPath: 'assets/icons/piece-of-cakeicon.png',
+          colors: Colors.brown.shade50),
+      CakeTabs(
+          iconPath: 'assets/icons/muffinicon.png',
+          colors: Colors.yellow.shade50),
+      CakeTabs(
+          iconPath: 'assets/icons/weddingcakeicon.png',
+          colors: Colors.red.shade50)
+    ];
     return DefaultTabController(
       length: 1,
       child: Scaffold(
@@ -124,6 +125,13 @@ class HomeView extends StatelessWidget {
                   ),
                 ),
               ),
+              TabBar(
+                tabs: cakeTabs,
+              ),
+              Expanded(
+                  child: TabBarView(
+                children: [],
+              ))
             ],
           ),
         ),
